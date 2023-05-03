@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#457D39DC"
+    tools:context=".MainActivity"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        app:srcCompat="@drawable/math" />
+
+    <TextView
+        android:id="@+id/equ"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="23dp"
+        android:text="Equation Type"
+        android:textColor="#9C27B0"
+        android:textSize="30dp"
+
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@id/equ"
+        android:layout_toRightOf="@id/equ" />
+
+    <Button
+        android:id="@+id/sol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/equ"
+        android:layout_marginTop="23dp"
+        android:onClick="btnSolve"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Solve" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/Ex"
+        android:textAlignment="center"
+        android:textColor="#F43636"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_below="@id/sol"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sol"
+
+        android:layout_toRightOf="@id/Ex"
+        android:id="@+id/ans"
+        />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/Ex"
+        android:layout_marginTop="24dp"
+        android:onClick="submit"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/good"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/submit"
+        android:layout_marginTop="16dp"
+        android:text="Excellent"
+        android:textColor="#52F436"
+        android:textSize="30dp"
+
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/bad"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bad"
+        android:textColor="#F43636"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bad"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="29dp"
+        android:text="Your Score is: "
+        android:textColor="#F43636"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bad"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@id/msg"
+        android:text="0"
+        android:textColor="#F43636"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
